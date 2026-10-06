@@ -1,0 +1,14 @@
+platform :ios, '17.0'
+project 'Xingji.xcodeproj'
+use_frameworks! :linkage => :static
+
+target 'Xingji' do
+  pod 'AMap3DMap', '11.2.100'
+  pod 'AMapSearch', '9.8.1'
+  pod 'AMapFoundation', '1.9.1'
+  target 'XingjiTests' do
+    inherit! :search_paths
+  end
+end
+# AMapFoundation 1.9.1 declares arm64 simulator exclusion. Use an iPhone
+# for the SDK integration; do not strip the vendor's exclusion in post_install.

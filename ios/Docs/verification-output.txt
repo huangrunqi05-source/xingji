@@ -1,0 +1,66 @@
+[0/1] Planning build
+Building for debugging...
+[0/3] Write swift-version--1AB21518FC5DEDBE.txt
+[1/4] Write sources
+[3/6] Emitting module XingjiData
+[4/6] Compiling XingjiData Persistence.swift
+[4/8] Write sources
+[6/10] Emitting module XingjiVerify
+[7/10] Compiling XingjiVerify main.swift
+[7/10] Write Objects.LinkFileList
+[8/10] Linking XingjiVerify
+[9/10] Applying XingjiVerify
+Build of product 'XingjiVerify' complete! (3.32s)
+No errors detected in compressed data of /var/folders/by/qrxq0bks6yggpg6mjfv0100c0000gn/T/XingjiVerify-184AEE05-401D-491D-B26B-B83528080634/test.zip.
+PASS 路过不生成到访
+PASS 超过五分钟停留生成正确时间
+PASS 定位缺口不能拼成停留
+PASS 商场相邻店铺保留待确认
+PASS 明确匹配保留具体分店标识
+PASS 不同坐标系不能直接比较
+PASS 精度不足不强行匹配
+PASS 超过三分钟中断分段
+PASS GPS 跳变断开路线
+PASS 精度过低不进入路线
+PASS 乱序位置不写入
+PASS 长轨迹按 256 点分块
+PASS 平均分忽略未评分
+PASS 只接受有效半星评分
+PASS 无旅行时不能恢复旅游
+PASS 旅游结束返回日常
+PASS 共享结构无坐标、精确时刻与私人照片引用
+PASS GPX 保留分段且正确转义
+PASS 共享日期固定按中国时区且不包含时刻
+PASS 系统到访与旅游采样的重叠记录去重
+PASS 同一天再次到访保留独立记录
+PASS 忽略地点仅覆盖指定半径
+PASS ZIP CRC32 标准校验
+PASS 构建含定位元数据的测试照片
+PASS 真实 JPEG 清除 GPS 元数据
+PASS 共享照片不保留原始拍摄时间
+PASS 照片压缩限制最长边 2048
+PASS Core Data 更新而非重复插入
+PASS 持久化拒绝无效评分
+PASS 旅行路线按行程隔离查询
+PASS 照片二进制正确往返
+PASS 私人修改不自动发布
+PASS 共享关系图与私人记录完全隔离
+PASS 共享照片使用独立副本
+PASS 共享参与者无写入权限
+PASS 删除私人记录撤回拥有的共享副本
+PASS CloudKit 模型兼容：PhotoBlob
+PASS CloudKit 模型兼容：SharedList
+PASS CloudKit 模型兼容：SharedPhoto
+PASS CloudKit 模型兼容：SharedEntry
+PASS CloudKit 模型兼容：PrivateRecord
+PASS 全量删除记录、照片与清单
+PASS 系统 unzip 校验导出 ZIP 与中文文件名
+PASS Python zipfile 确认 UTF-8 文件名与内容
+PASS SQLite 重启后记录仍存在
+
+45 checks passed. CloudKit networking, iOS UI and real GPS require signed device testing.
+Xingji.xcodeproj/project.pbxproj: OK
+App/Resources/Info.plist: OK
+App/Resources/Xingji.entitlements: OK
+App/Resources/PrivacyInfo.xcprivacy: OK
+Project references, resources, shared scheme and required capability declarations: OK

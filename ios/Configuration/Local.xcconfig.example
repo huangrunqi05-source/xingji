@@ -1,0 +1,6 @@
+// Copy to Local.xcconfig; this file is intentionally excluded from version control.
+XINGJI_BUNDLE_ID = com.yourcompany.Xingji
+DEVELOPMENT_TEAM = YOUR_TEAM_ID
+AMAP_API_KEY = YOUR_IOS_AMAP_KEY
+XINGJI_CLOUD_CONTAINER = iCloud.com.yourcompany.Xingji
+XINGJI_CLOUD_ENABLED = YES

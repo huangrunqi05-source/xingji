@@ -1,0 +1,5 @@
+const PREFIX='xingji-'+self.registration.scope+'-',CACHE=PREFIX+'v1';
+const ASSETS=['./','./index.html','./app.js','./model.js','./storage.js','./style.css','./icon.png','./favicon.svg','./coffee.jpg','./manifest.webmanifest'];
+self.addEventListener('install',ev=>ev.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
+self.addEventListener('activate',ev=>ev.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(PREFIX)&&k!==CACHE).map(k=>caches.delete(k)))),self.clients.claim()])));
+self.addEventListener('fetch',ev=>{const url=new URL(ev.request.url);if(ev.request.method!=='GET'||url.origin!==location.origin||!url.href.startsWith(self.registration.scope))return;ev.respondWith(fetch(ev.request).then(response=>{if(response.ok&&ASSETS.some(p=>new URL(p,self.registration.scope).href===url.href)){const copy=response.clone();ev.waitUntil(caches.open(CACHE).then(c=>c.put(ev.request,copy)))}return response}).catch(async()=>await caches.match(ev.request)||((ev.request.mode==='navigate')?await caches.match(new URL('./index.html',self.registration.scope).href):Response.error())))})

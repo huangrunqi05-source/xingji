@@ -1,0 +1,13 @@
+.DS_Store
+.build/
+.swiftpm/
+.tools/
+Pods/
+DerivedData/
+Configuration/Local.xcconfig
+*.xcuserstate
+xcuserdata/
+vendor/
+.bundle/
+*.ipa
+*.xcarchive

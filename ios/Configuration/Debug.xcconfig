@@ -1,0 +1,6 @@
+#include? "../Pods/Target Support Files/Pods-Xingji/Pods-Xingji.debug.xcconfig"
+#include "Base.xcconfig"
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) DEBUG
+SWIFT_OPTIMIZATION_LEVEL = -Onone
+
+APS_ENVIRONMENT = development
